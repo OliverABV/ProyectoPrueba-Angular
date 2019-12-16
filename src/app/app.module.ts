@@ -8,7 +8,7 @@ import { LoginComponent } from './content/login/login.component';
 import { InicioComponent } from './content/inicio/inicio.component';
 import { HeaderComponent } from './content/header/header.component';
 import { MaterialModule } from './material/material.module';
-
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,8 @@ import { MaterialModule } from './material/material.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    MatAutocompleteModule
 
   ],
   providers: [],
