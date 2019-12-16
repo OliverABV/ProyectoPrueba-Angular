@@ -21,7 +21,7 @@
     width: 170px;
     top: -75px;
     border-radius: 50%;
-    background:#0f6299 !important;
+    background:#28a754 !important;
     padding: 10px;
     text-align: center;
 }
@@ -36,7 +36,7 @@
 }
 .login_btn {
     width: 100%;
-    background: #0f6299 !important;
+    background: #28a754!important;
     color: white !important;
 }
 .login_btn:focus {
