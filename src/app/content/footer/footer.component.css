@@ -1,0 +1,40 @@
+.contenido{
+  background-color: rgb(228, 222, 222);
+  margin-top: 100px;
+  width: 100% !important;
+  margin-bottom: 0px !important;
+}
+
+.formas-pago
+{
+  width: 100%;
+  margin: auto;
+}
+
+.formas-pago ul
+{
+margin-top: 5%;
+display: flex;
+text-align: center;
+width: 90%;
+}
+
+.formas-pago li
+{
+list-style: none;
+width: 100%;
+}
+
+.formas-pago img
+{
+ width: 10%;  
+ height: 30px; 
+}
+
+.btn.btn-default {
+  color: #fff;
+  background-color: #333;
+  border-color: #333;
+  margin-bottom: 8px;
+}
+
