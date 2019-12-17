@@ -8,8 +8,7 @@ import { LoginComponent } from './content/login/login.component';
 import { InicioComponent } from './content/inicio/inicio.component';
 import { HeaderComponent } from './content/header/header.component';
 import { MaterialModule } from './material/material.module';
-import { MenuComponent } from './content/menu/menu.component';
-
+import { MainComponent } from './content/main/main.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +16,11 @@ import { MenuComponent } from './content/menu/menu.component';
     LoginComponent,
     InicioComponent,
     HeaderComponent,
-    MenuComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, 
     BrowserAnimationsModule,
     MaterialModule,
 
