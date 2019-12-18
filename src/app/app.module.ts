@@ -12,6 +12,9 @@ import { MainComponent } from './content/main/main.component';
 import { FooterComponent } from './content/footer/footer.component';
 import { VentaComponent } from './content/venta/venta.component';
 import {MatIconModule} from '@angular/material/icon';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { RegistroComponent } from './content/registro/registro.component';
+import { CarritoComprasComponent } from './content/carrito-compras/carrito-compras.component';
 
 @NgModule({
   declarations: [
@@ -21,14 +24,17 @@ import {MatIconModule} from '@angular/material/icon';
     HeaderComponent,
     MainComponent,
     FooterComponent,
-    VentaComponent
+    VentaComponent,
+    RegistroComponent,
+    CarritoComprasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     BrowserAnimationsModule,
     MaterialModule,
-    MatIconModule
+    MatIconModule,
+    MatTooltipModule
 
   ],
   providers: [],
