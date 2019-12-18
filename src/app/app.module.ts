@@ -11,6 +11,7 @@ import { MaterialModule } from './material/material.module';
 import { MainComponent } from './content/main/main.component';
 import { FooterComponent } from './content/footer/footer.component';
 import { VentaComponent } from './content/venta/venta.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { VentaComponent } from './content/venta/venta.component';
     AppRoutingModule, 
     BrowserAnimationsModule,
     MaterialModule,
+    MatIconModule
 
   ],
   providers: [],

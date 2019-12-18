@@ -1,5 +1,5 @@
 .contenido{
-  background-color: rgb(228, 222, 222);
+  background-color: rgb(231, 231, 231);
   margin-top: 100px;
   width: 100% !important;
   margin-bottom: 0px !important;
@@ -13,7 +13,7 @@
 
 .formas-pago ul
 {
-margin-top: 5%;
+margin-top: 10px;
 display: flex;
 text-align: center;
 width: 90%;
@@ -27,8 +27,8 @@ width: 100%;
 
 .formas-pago img
 {
- width: 10%;  
- height: 30px; 
+ width: 15%;  
+ height: 40px; 
 }
 
 .btn.btn-default {
