@@ -15,6 +15,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { RegistroComponent } from './content/registro/registro.component';
 import { CarritoComprasComponent } from './content/carrito-compras/carrito-compras.component';
+import { QuienesSomosComponent } from './content/quienes-somos/quienes-somos.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CarritoComprasComponent } from './content/carrito-compras/carrito-compr
     FooterComponent,
     VentaComponent,
     RegistroComponent,
-    CarritoComprasComponent
+    CarritoComprasComponent,
+    QuienesSomosComponent
   ],
   imports: [
     BrowserModule,
