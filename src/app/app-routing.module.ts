@@ -5,6 +5,9 @@ import { MainComponent } from './content/main/main.component';
 import { VentaComponent } from './content/venta/venta.component';
 import { QuienesSomosComponent } from './content/quienes-somos/quienes-somos.component';
 import { RegistroComponent } from './content/registro/registro.component';
+import { AuthGuard } from './guard/auth.guard';
+import { HomeUserComponent } from './content/home-user/home-user.component';
+
 
 const routes: Routes = [
 {
@@ -14,6 +17,11 @@ const routes: Routes = [
 {
   path: 'login',
   component: LoginComponent
+},
+{
+  path: 'homeUser',
+  canActivate: [AuthGuard],
+  component: HomeUserComponent
 },
 {
   path: 'registro',
@@ -30,7 +38,14 @@ const routes: Routes = [
 {
   path: 'nosotros',
   component: QuienesSomosComponent
-}];
+},
+{
+  //si ninguna opcion no existe, no lo manda a nunguna parte
+  path: '**',
+  redirectTo: '',
+  pathMatch: 'full'
+}
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

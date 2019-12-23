@@ -11,11 +11,12 @@ import { MaterialModule } from './material/material.module';
 import { MainComponent } from './content/main/main.component';
 import { FooterComponent } from './content/footer/footer.component';
 import { VentaComponent } from './content/venta/venta.component';
-import {MatIconModule} from '@angular/material/icon';
-import {MatTooltipModule} from '@angular/material/tooltip';
 import { RegistroComponent } from './content/registro/registro.component';
 import { CarritoComprasComponent } from './content/carrito-compras/carrito-compras.component';
 import { QuienesSomosComponent } from './content/quienes-somos/quienes-somos.component';
+import { HomeUserComponent } from './content/home-user/home-user.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,15 +29,16 @@ import { QuienesSomosComponent } from './content/quienes-somos/quienes-somos.com
     VentaComponent,
     RegistroComponent,
     CarritoComprasComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
+    HomeUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     BrowserAnimationsModule,
     MaterialModule,
-    MatIconModule,
-    MatTooltipModule
+    CommonModule,
+    FormsModule
 
   ],
   providers: [],
