@@ -16,7 +16,10 @@ import { CarritoComprasComponent } from './content/carrito-compras/carrito-compr
 import { QuienesSomosComponent } from './content/quienes-somos/quienes-somos.component';
 import { HomeUserComponent } from './content/home-user/home-user.component';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RestablecerPassComponent } from './content/restablecer-pass/restablecer-pass.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,9 @@ import { FormsModule } from '@angular/forms';
     RegistroComponent,
     CarritoComprasComponent,
     QuienesSomosComponent,
-    HomeUserComponent
+    HomeUserComponent,
+    RestablecerPassComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -38,10 +43,10 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MaterialModule,
     CommonModule,
-    FormsModule
-
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers:  [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

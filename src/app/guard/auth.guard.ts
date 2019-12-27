@@ -20,6 +20,7 @@ export class AuthGuard implements CanActivate {
       }
       console.log('Usuario no autorizado');
       this.router.navigate(['/login']);
+      alert('Usuario ingresado no es correcto');
       return false;
     }
 }

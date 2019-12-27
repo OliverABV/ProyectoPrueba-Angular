@@ -5,50 +5,67 @@
         </div>
     </div>
     
-    <form>
+    <form [formGroup]="formG">
         <div class="row justify-content-center"> <!-- Nombre -->
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
-                <label>Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre">
+                <mat-form-field class="w-100"> 
+                    <input matInput id="name" name="name" placeholder="Nombre" formControlName="name" required pattern="[a-zA-Z]*" maxlength="20" appOnlyChar onpaste="return false"> 
+                    <mat-error *ngIf="formG.controls.name.errors && formG.controls.name.errors.required && (formG.controls.name.dirty || formG.controls.name.touched)">Campo requerido</mat-error>
+                    <mat-error *ngIf="formG.controls.name.errors && formG.controls.name.errors.pattern && (formG.controls.name.dirty || formG.controls.name.touched)">No se pueden ingresar números</mat-error>
+                    <!-- appOnlyChar -->
+                  </mat-form-field>
             </div>
         </div>    
     
         <div class="row justify-content-center"> <!-- Apellido-->
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
-                <label>Apellido</label>
-                <input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido">
+                <mat-form-field class="w-100">
+                    <input matInput id="lastname" name="lastname" placeholder="Apellido" formControlName="lastname" required pattern="[a-zA-Z]*" appOnlyChar onpaste="return false">
+                    <mat-error *ngIf="formG.controls.name.errors && formG.controls.name.errors.required && (formG.controls.name.dirty || formG.controls.name.touched)">Campo requerido</mat-error>
+                    <mat-error *ngIf="formG.controls.name.errors && formG.controls.name.errors.pattern && (formG.controls.name.dirty || formG.controls.name.touched)">No se pueden ingresar números</mat-error>
+                  </mat-form-field>
             </div>
         </div>                    
                                 
         <div class="row justify-content-center"> <!-- Usuario-->
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
-                <label>Usuario</label>
-                <input type="text" class="form-control" id="usuario" name="usuario" placeholder="Usuario">  
+                <mat-form-field class="w-100">
+                    <input matInput id="username" name="username" placeholder="Usuario" formControlName="username" required appOnlyChar onpaste="return false">
+                    <mat-error *ngIf="formG.controls.name.errors && formG.controls.name.errors.required && (formG.controls.name.dirty || formG.controls.name.touched)">Campo requerido</mat-error>
+                    <mat-error *ngIf="formG.controls.name.errors && formG.controls.name.errors.pattern && (formG.controls.name.dirty || formG.controls.name.touched)">No se pueden ingresar números</mat-error>
+                </mat-form-field>
             </div>
         </div>  
         
     
         <div class="row justify-content-center"> <!-- Password-->
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
-                <label>Contraseña</label>
-                <input type="password" class="form-control" id="city_id" name="city" placeholder="Contraseña">
+                <mat-form-field class="w-100">
+                    <input type="password" matInput id="pws" name="pws" placeholder="Contraseña" formControlName="pws" required>
+                    <mat-error *ngIf="formG.controls.name.errors && formG.controls.name.errors.required && (formG.controls.name.dirty || formG.controls.name.touched)">Campo obligatorio</mat-error>
+                 </mat-form-field>
             </div>
         </div>                                    
-                                
+        <br>                          
         <div class="row justify-content-center"> <!-- Ciudad -->
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
-                <label for="state_id" class="control-label">Ciudad</label>
-            <select class="form-control" id="state_id">
-                <option value="AL">La Pintana</option>
-                <option value="AK">La Granja</option>
-                <option value="AZ">La Cisterna</option>
-            </select>  
+                <mat-form-field class="w-100">
+                    <mat-label>Ciudad</mat-label>
+                    <mat-select formControlName="country">
+                        <mat-option *ngFor="let country of countryList" [value]="country.id" >
+                        {{ country.name }}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
             </div>                  
         </div>        
         <br>
         <div class="row justify-content-center"> <!-- Submit Button -->
             <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
-                <button type="submit" class="btn btn-primary w-100">Registrar</button>
+                <button mat-button type="button" mat-raised-button color="secondary" routerLink="/login" class="w-100">Volver</button>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+                <button mat-button type="button" mat-raised-button color="primary"  (click)="saveUser()" class="w-100">guardar</button>
             </div>
         </div>     
     </form>

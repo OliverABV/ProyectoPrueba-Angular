@@ -5,9 +5,11 @@ import { MatBottomSheetModule} from '@angular/material/bottom-sheet';
 import { MatIconModule} from '@angular/material/icon';
 import { MatTooltipModule} from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from '../mocks/in-memory-data.service';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -17,13 +19,15 @@ import { InMemoryDataService } from '../mocks/in-memory-data.service';
     MatBottomSheetModule,
     HttpClientInMemoryWebApiModule.forRoot(
     InMemoryDataService),
-    HttpClientModule,
-    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports: [
     MatIconModule,
     MatTooltipModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatInputModule
   ],
 })
 export class MaterialModule { }

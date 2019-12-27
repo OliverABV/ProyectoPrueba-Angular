@@ -1,0 +1,9 @@
+.brand_logo {
+    background-color: #284ca7;
+    padding: 10px;
+    display: flex;
+    margin: auto;
+    width: 50%;
+    border-radius: 50%;
+    border: 2px solid white;
+}

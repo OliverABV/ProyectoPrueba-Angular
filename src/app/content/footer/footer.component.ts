@@ -12,4 +12,8 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
+  onNavigate(){
+    var Facebook = "https://es-la.facebook.com"
+  }
+
 }

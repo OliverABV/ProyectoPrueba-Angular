@@ -12,14 +12,4 @@ describe('HeaderComponent', () => {
     })
     .compileComponents();
   }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(HeaderComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });

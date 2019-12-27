@@ -28,7 +28,7 @@ width: 100%;
 .formas-pago img
 {
  width: 15%;  
- height: 40px; 
+ margin: auto;
 }
 
 .btn.btn-default {

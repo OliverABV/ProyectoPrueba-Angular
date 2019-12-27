@@ -7,6 +7,8 @@ import { QuienesSomosComponent } from './content/quienes-somos/quienes-somos.com
 import { RegistroComponent } from './content/registro/registro.component';
 import { AuthGuard } from './guard/auth.guard';
 import { HomeUserComponent } from './content/home-user/home-user.component';
+import { RestablecerPassComponent } from './content/restablecer-pass/restablecer-pass.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
@@ -40,10 +42,12 @@ const routes: Routes = [
   component: QuienesSomosComponent
 },
 {
-  //si ninguna opcion no existe, no lo manda a nunguna parte
+  path: 'restablecerPass',
+  component: RestablecerPassComponent
+},
+{
   path: '**',
-  redirectTo: '',
-  pathMatch: 'full'
+  component: PageNotFoundComponent
 }
 ];
 
